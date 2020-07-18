@@ -10,12 +10,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
 }
 
 a {
   color: #0150ac;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 p {
@@ -36,8 +38,13 @@ p {
 }
 
 .header__avatar {
+  width: 45px;
+}
+
+.header__avatar img {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
 
 .separator {
@@ -52,11 +59,13 @@ p {
 
 .ticket__name {
   font-weight: 700;
+  font-size: 16px;
 }
 
 .business__image {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
 
 .block {
@@ -64,7 +73,7 @@ p {
 }
 
 .info__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 30px;
   width: 230px;
@@ -83,7 +92,167 @@ p {
   width: 100%;
 }
 
-.table--info__column-1 {
+.table__row-space {
+  display: block;
+  height: 10px;
+  width: 100%;
+}
+
+.table__column-1 {
   width: 150px;
+}
+
+.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.status__color {
+  width: 30px;
+  height: 20px;
+  background-color: #0150ac;
+}
+
+.status__name {
+  margin-left: 5px;
+}
+
+.priority {
+  padding: 4px 5px;
+  border: 1px solid #0150ac;
+  border-radius: 2px;
+}
+
+.assignee {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #0168df;
+  border-radius: 2px;
+  height: 35px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.assignee__avatar {
+  margin-right: 5px;
+}
+
+.assignee img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.acceptance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.acceptance__avatar {
+  margin-right: 10px;
+}
+
+.acceptance__info span {
+  display: block;
+}
+
+.acceptance__email {
+  color: grey;
+  font-size: 12px;
+}
+
+.acceptance img {
+  width: 30px;
+  height: 30px;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.label--default {
+  background-color: #489cfe;
+  color: #000;
+}
+
+.label--primary {
+  background-color: #0168df;
+}
+
+.end-separator {
+  width: 230px;
+  height: 2px;
+  background-color: #0150ac;
+}
+
+.detail-here {
+  line-height: 40px;
+}
+
+.detail-link {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  width: 150px;
+  border-radius: 2px;
+  background-color: #0150ac;
+  text-decoration: none;
+}
+
+.detail-link:hover {
+  background-color: #013879;
+}
+
+.notice {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 40px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #0150ac;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+.footer table {
+  width: 100%;
+  height: 80px;
+}
+
+.footer .logo {
+  position: relative;
+  height: 45px;
+  width: 165px;
+}
+
+.footer .logo__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer .logo__text {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=main.css.map */
