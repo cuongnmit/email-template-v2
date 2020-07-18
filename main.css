@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #0150ac;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.header {
+  padding: 20px;
+}
+
+.header__link {
+  font-size: 12px;
+}
+
+.header__avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: #0150ac;
+}
+
+.content {
+  padding: 20px;
+}
+
+.ticket__name {
+  font-weight: 700;
+}
+
+.business__image {
+  width: 30px;
+  height: 30px;
+}
+
+.block {
+  margin-bottom: 10px;
+}
+
+.info__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  width: 230px;
+}
+
+.info__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #0150ac;
+}
+
+.table {
+  width: 100%;
+}
+
+.table--info__column-1 {
+  width: 150px;
+}
+/*# sourceMappingURL=main.css.map */
