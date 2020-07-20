@@ -15,6 +15,11 @@ body {
 
 $blue: #0150ac;
 $light-blue: lighten($blue, 10);
+$inprogress-color: rgb(242, 201, 76);
+$pending-approve: rgb(253, 126, 20);
+$pending: rgb(235, 238, 240);
+$finish: rgb(0, 128, 0);
+$cancel: rgb(219, 55, 0);
 
 a {
   color: $blue;
@@ -118,6 +123,10 @@ p {
     width: 30px;
     height: 20px;
     background-color: $blue;
+
+    &--inprogress {
+      background-color: $inprogress-color;
+    }
   }
 
   &__name {
@@ -266,4 +275,99 @@ p {
 
 .w-100 {
   width: 100%;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items {
+  &--center {
+    align-items: center;
+  }
+}
+
+.actor {
+  &__name {
+    margin: 0 1px;
+  }
+}
+
+.time {
+  font-size: 12px;
+  color: grey;
+}
+
+.before,
+.after {
+  padding: 10px;
+  vertical-align: top;
+  max-width: 700px;
+  margin-bottom: 5px;
+}
+
+.before {
+  display: inline-block;
+  background-color: #ffebe6;
+  text-decoration: line-through;
+}
+
+.arrow {
+  width: 2px;
+  display: inline-block;
+}
+
+.after {
+  display: inline-block;
+  background-color: #e3fcef;
+}
+
+.history {
+  margin-bottom: 20px;
+  &__header {
+    list-style: square;
+    padding-left: 15px;
+  }
+}
+
+.comment {
+  .item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    &__avatar {
+      margin-right: 5px;
+    }
+
+    &__time {
+      font-size: 12px;
+      color: grey;
+    }
+
+    &__text {
+      margin-top: 10px;
+    }
+  }
+}
+
+.sub-tickets {
+  padding-left: 30px;
+  margin: 0;
+
+  li {
+    margin-bottom: 5px;
+
+    span {
+      padding: 5px;
+      display: inline-block;
+      background-color: #e3fcef;
+    }
+  }
 }

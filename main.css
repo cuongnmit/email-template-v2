@@ -118,6 +118,10 @@ p {
   background-color: #0150ac;
 }
 
+.status__color--inprogress {
+  background-color: #f2c94c;
+}
+
 .status__name {
   margin-left: 5px;
 }
@@ -281,5 +285,104 @@ p {
 
 .w-100 {
   width: 100%;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-items--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actor__name {
+  margin: 0 1px;
+}
+
+.time {
+  font-size: 12px;
+  color: grey;
+}
+
+.before,
+.after {
+  padding: 10px;
+  vertical-align: top;
+  max-width: 700px;
+  margin-bottom: 5px;
+}
+
+.before {
+  display: inline-block;
+  background-color: #ffebe6;
+  text-decoration: line-through;
+}
+
+.arrow {
+  width: 2px;
+  display: inline-block;
+}
+
+.after {
+  display: inline-block;
+  background-color: #e3fcef;
+}
+
+.history {
+  margin-bottom: 20px;
+}
+
+.history__header {
+  list-style: square;
+  padding-left: 15px;
+}
+
+.comment .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.comment .item__avatar {
+  margin-right: 5px;
+}
+
+.comment .item__time {
+  font-size: 12px;
+  color: grey;
+}
+
+.comment .item__text {
+  margin-top: 10px;
+}
+
+.sub-tickets {
+  padding-left: 30px;
+  margin: 0;
+}
+
+.sub-tickets li {
+  margin-bottom: 5px;
+}
+
+.sub-tickets li span {
+  padding: 5px;
+  display: inline-block;
+  background-color: #e3fcef;
 }
 /*# sourceMappingURL=main.css.map */
