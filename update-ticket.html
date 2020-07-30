@@ -4,7 +4,424 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ticket Platform - Email Templates</title>
-        <link rel="stylesheet" href="./main.css" />
+        <!-- <link rel="stylesheet" href="./main.css" /> -->
+        <style>
+            *,
+            *::before,
+            *::after {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            * {
+                font-size: 14px;
+                color: #222;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: 14px;
+            }
+
+            a {
+                color: #0150ac;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .no-margin {
+                margin: 0;
+            }
+
+            .header {
+                padding: 0 20px;
+            }
+
+            .header__link {
+                font-size: 12px;
+            }
+
+            .header__avatar {
+                width: 45px;
+            }
+
+            .header__avatar img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .separator {
+                width: 100%;
+                height: 2px;
+                background-color: rgba(102, 102, 102, 0.5);
+            }
+
+            .separator--230 {
+                margin: 5px 0;
+                width: 230px;
+            }
+
+            .content {
+                padding: 0 20px;
+            }
+
+            .ticket__name {
+                font-weight: 700;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .ticket__name:hover {
+                text-decoration: underline;
+            }
+
+            .business__image {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .block {
+                margin-bottom: 10px;
+            }
+
+            .ticket {
+                margin-top: 10px;
+            }
+
+            .info__title {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0;
+                color: rgba(0, 0, 0, 0.75);
+            }
+
+            .table {
+                width: 100%;
+            }
+
+            .table__row-space {
+                display: block;
+                height: 10px;
+                width: 100%;
+            }
+
+            .table__column-1 {
+                width: 150px;
+                vertical-align: top;
+            }
+
+            .status {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .status__color {
+                width: 30px;
+                height: 20px;
+                background-color: #0150ac;
+            }
+
+            .status__color--inprogress {
+                background-color: #f2c94c;
+            }
+
+            .status__name {
+                margin-left: 5px;
+            }
+
+            .priority {
+                padding: 4px 5px;
+                border: 1px solid #000;
+                border-radius: 5px;
+            }
+
+            .assignee {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                border-radius: 5px;
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .assignee__avatar {
+                margin-right: 5px;
+                height: 18px;
+            }
+
+            .assignee__name {
+                font-weight: bold;
+            }
+
+            .assignee img {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+            }
+
+            .acceptance {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .acceptance__avatar {
+                margin-right: 10px;
+            }
+
+            .acceptance__info span {
+                display: block;
+            }
+
+            .acceptance__email {
+                color: grey;
+                font-size: 12px;
+            }
+
+            .acceptance img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .label {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 2px;
+                color: #fff;
+                max-width: 165px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 1px;
+            }
+
+            .label--default {
+                background-color: #489cfe;
+                color: #000;
+            }
+
+            .label--primary {
+                background-color: #0168df;
+            }
+
+            .detail {
+                width: 100%;
+            }
+
+            .detail__here {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .detail__link {
+                display: inline-block;
+                padding: 10px 15px;
+                color: #fff !important;
+                border-radius: 5px;
+                background-color: #0150ac;
+                text-decoration: none;
+                margin-bottom: 5px;
+            }
+
+            .detail__link:hover {
+                background-color: #013879;
+            }
+
+            .detail__notice {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                font-style: italic;
+                font-size: 12px;
+            }
+
+            .footer {
+                width: 100%;
+                height: 100%;
+                background-color: #ebeef0;
+                color: #fff;
+                font-size: 12px;
+                padding: 10px 15px;
+            }
+
+            .footer p {
+                font-size: 12px;
+                color: #666666 !important;
+            }
+
+            @media only screen and (min-width: 500px) {
+                .footer {
+                    padding: 15px 20px;
+                }
+                .footer__right {
+                    width: 165px;
+                }
+            }
+
+            .footer .logo {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .footer .logo__image {
+                height: 35px;
+            }
+
+            .w-100 {
+                width: 100%;
+            }
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .d-flex {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .align-items--center {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .actor__name {
+                margin-left: 5px;
+                color: rgba(0, 0, 0, 0.75);
+            }
+
+            .time {
+                font-size: 12px;
+                color: grey;
+            }
+
+            .before,
+            .after {
+                padding: 10px;
+                vertical-align: top;
+                margin-bottom: 5px;
+                min-height: 36px;
+            }
+
+            .before {
+                display: inline-block;
+                background-color: #ffebe6;
+            }
+
+            .before div,
+            .before a,
+            .before p,
+            .before .label {
+                text-decoration: line-through;
+            }
+
+            .arrow {
+                width: 2px;
+                display: inline-block;
+            }
+
+            .after {
+                display: inline-block;
+                background-color: #e3fcef;
+            }
+
+            .history {
+                margin-bottom: 20px;
+            }
+
+            .history__header {
+                list-style: square;
+                padding-left: 15px;
+                margin: 5px 0;
+            }
+
+            .comment .item {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+
+            .comment .item:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .comment .item__avatar {
+                margin-right: 5px;
+            }
+
+            .comment .item__time {
+                font-size: 12px;
+                color: grey;
+            }
+
+            .comment .item__text {
+                margin-top: 10px;
+            }
+
+            .sub-tickets {
+                padding-left: 0px;
+                margin: 0;
+                list-style: none;
+            }
+
+            .sub-tickets li {
+                margin-bottom: 5px;
+            }
+
+            .sub-tickets li span {
+                padding: 5px;
+                display: inline-block;
+                background-color: #e3fcef;
+            }
+
+            .attachment-list {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                list-style: none;
+            }
+
+            .attachment-list__item {
+                min-height: 25px;
+            }
+            /*# sourceMappingURL=main.css.map */
+        </style>
     </head>
     <body>
         <div class="container">
@@ -13,26 +430,13 @@
                     <tbody>
                         <tr>
                             <td class="header__avatar">
-                                <img
-                                    src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png"
-                                    alt="user-avatar"
-                                />
+                                <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="user-avatar" />
                             </td>
                             <td>
                                 <p>
-                                    <strong
-                                        >Nguyễn Mạnh Cường, Chu Tuấn Anh</strong
-                                    >
-                                    đã thêm <strong>06 cập nhật</strong> cho
-                                    ticket. <strong>Chu Tuấn Anh</strong> và 02
-                                    người khác đã thêm
-                                    <strong>03 trao đổi</strong> và bạn đã
-                                    <strong>được nhắc đến</strong> trong trao
-                                    đổi.
+                                    <strong>Nguyễn Mạnh Cường, Chu Tuấn Anh</strong>
+                                    đã thêm <strong>06 cập nhật</strong> cho ticket. <strong>Chu Tuấn Anh</strong> và 02 người khác đã thêm <strong>03 trao đổi</strong> và bạn đã <strong>được nhắc đến</strong> trong trao đổi.
                                 </p>
-                                <a href="#" class="header__link"
-                                    >Xem trong Bizfly Ticket</a
-                                >
                             </td>
                         </tr>
                     </tbody>
@@ -41,27 +445,19 @@
             <div class="separator"></div>
             <div class="content">
                 <div class="ticket block">
-                    <p class="ticket__name">
-                        #2068 - Tiếp nhận yêu cầu lỗi với nội dung khá dài. Tiếp
-                        nhận yêu cầu lỗi với nội dung khá dài
-                    </p>
+                    <a class="ticket__name" href="#">
+                        #2068 - Tiếp nhận yêu cầu lỗi với nội dung khá dài. Tiếp nhận yêu cầu lỗi với nội dung khá dài
+                    </a>
                 </div>
                 <div class="business block">
-                    <p>Nhóm công việc</p>
                     <table>
                         <tbody>
                             <tr>
                                 <td>
-                                    <img
-                                        class="business__image"
-                                        src="https://dev.beta.ticket.todo.vn/images/logo-project.png"
-                                        alt="business-image"
-                                    />
+                                    <img class="business__image" src="https://dev.beta.ticket.todo.vn/images/logo-project.png" alt="business-image" />
                                 </td>
                                 <td>
-                                    <span class="business__name"
-                                        >Phát triển sản phâm</span
-                                    >
+                                    <span class="business__name">Phát triển sản phâm</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -73,27 +469,22 @@
                     <p class="info__title">Cập nhật (6)</p>
                     <div class="separator separator--230 separator--info"></div>
                     <div>
-                        <div class="d-flex align-items--center actor">
-                            <img
-                                src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png"
-                                alt="acceptance-avatar"
-                                class="avatar actor__avatar"
-                            />
-                            <strong class="actor__name"
-                                >Nguyễn Mạnh Cường</strong
-                            >
-                            đã cập nhật thông tin ticket
-                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="acceptance-avatar" class="avatar actor__avatar" /></td>
+                                    <td><strong class="actor__name">Nguyễn Mạnh Cường</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <table class="history">
                             <tbody>
                                 <tr>
                                     <td colspan="3">
                                         <ul class="history__header">
                                             <li>
-                                                <span>Cập nhật mô tả</span>
-                                                <span class="time"
-                                                    >09:50 20/07/2020</span
-                                                >
+                                                <span>Mô tả</span>
+                                                <span class="time">09:50 20/07/2020</span>
                                             </li>
                                         </ul>
                                     </td>
@@ -101,54 +492,14 @@
                                 <tr>
                                     <td>
                                         <div class="before">
-                                            <p>
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing elit.
-                                                Corporis eius ad quo accusamus
-                                                ducimus! Voluptatem a itaque ex,
-                                                ratione quidem ad hic sequi
-                                                commodi aspernatur laboriosam
-                                                illum molestias facilis nulla
-                                                facere sunt quaerat aliquam
-                                                consectetur molestiae. Beatae,
-                                                repellendus! Soluta vero
-                                                inventore laudantium assumenda
-                                                debitis, obcaecati aspernatur
-                                                illum dolore blanditiis vel.
-                                            </p>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis eius ad quo accusamus ducimus! Voluptatem a itaque ex, ratione quidem ad hic sequi commodi aspernatur laboriosam illum molestias facilis nulla facere sunt quaerat aliquam consectetur molestiae. Beatae, repellendus! Soluta vero inventore laudantium assumenda debitis, obcaecati aspernatur illum dolore blanditiis vel.</p>
                                         </div>
-                                        <div class="arrow">&nbsp;</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         <div class="after">
-                                            <p>
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing elit.
-                                                Modi nisi nihil repellendus
-                                                deserunt quo officia! Quasi
-                                                excepturi enim quaerat ab,
-                                                aspernatur aliquam accusamus eos
-                                                recusandae laboriosam vitae
-                                                quidem incidunt, explicabo,
-                                                voluptatibus temporibus.
-                                                Assumenda, deserunt laudantium.
-                                                Praesentium ducimus esse
-                                                architecto. Dignissimos fugiat
-                                                veniam laboriosam atque cum iure
-                                                vel sed corrupti, illum modi
-                                                dolorem debitis adipisci impedit
-                                                quasi distinctio odio sequi.
-                                                Repellat doloribus dolorum
-                                                impedit veniam iusto obcaecati
-                                                voluptates reprehenderit modi
-                                                illum natus magni perferendis
-                                                voluptatum rerum sunt enim,
-                                                pariatur iste? Dignissimos atque
-                                                natus officia dolorum
-                                                accusantium? Laudantium nulla
-                                                architecto repellendus adipisci
-                                                nihil debitis eos culpa aliquam
-                                                minima asperiores tempore, ad
-                                                ipsam.
-                                            </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi nihil repellendus deserunt quo officia! Quasi excepturi enim quaerat ab, aspernatur aliquam accusamus eos recusandae laboriosam vitae quidem incidunt, explicabo, voluptatibus temporibus. Assumenda, deserunt laudantium. Praesentium ducimus esse architecto. Dignissimos fugiat veniam laboriosam atque cum iure vel sed corrupti, illum modi dolorem debitis adipisci impedit quasi distinctio odio sequi. Repellat doloribus dolorum impedit veniam iusto obcaecati voluptates reprehenderit modi illum natus magni perferendis voluptatum rerum sunt enim, pariatur iste? Dignissimos atque natus officia dolorum accusantium? Laudantium nulla architecto repellendus adipisci nihil debitis eos culpa aliquam minima asperiores tempore, ad ipsam.</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -156,10 +507,8 @@
                                     <td colspan="3">
                                         <ul class="history__header">
                                             <li>
-                                                <span>Cập nhật trạng thái</span>
-                                                <span class="time"
-                                                    >09:51 20/07/2020</span
-                                                >
+                                                <span>Trạng thái</span>
+                                                <span class="time">09:51 20/07/2020</span>
                                             </li>
                                         </ul>
                                     </td>
@@ -168,23 +517,18 @@
                                     <td>
                                         <div class="before">
                                             <div class="status">
-                                                <div
-                                                    class="status__color"
-                                                ></div>
-                                                <div class="status__name">
-                                                    Mới
-                                                </div>
+                                                <div class="status__color"></div>
+                                                <div class="status__name">Mới</div>
                                             </div>
                                         </div>
-                                        <div class="arrow">&nbsp;</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         <div class="after">
                                             <div class="status">
-                                                <div
-                                                    class="status__color status__color--inprogress"
-                                                ></div>
-                                                <div class="status__name">
-                                                    Đang xử lý
-                                                </div>
+                                                <div class="status__color status__color--inprogress"></div>
+                                                <div class="status__name">Đang xử lý</div>
                                             </div>
                                         </div>
                                     </td>
@@ -194,9 +538,7 @@
                                         <ul class="history__header">
                                             <li>
                                                 <span>Ticket phụ</span>
-                                                <span class="time"
-                                                    >09:51 20/07/2020</span
-                                                >
+                                                <span class="time">09:51 20/07/2020</span>
                                             </li>
                                         </ul>
                                     </td>
@@ -206,31 +548,265 @@
                                         <ul class="sub-tickets">
                                             <li>
                                                 <span>
-                                                    #1026 - Lorem ipsum dolor
-                                                    sit amet.
+                                                    #1026 - Lorem ipsum dolor sit amet.
                                                 </span>
                                             </li>
                                             <li>
                                                 <span>
-                                                    #1027 - Lorem ipsum, dolor
-                                                    sit amet consectetur
-                                                    adipisicing elit. Vitae,
-                                                    quibusdam.
+                                                    #1027 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, quibusdam.
                                                 </span>
                                             </li>
                                             <li>
                                                 <span>
-                                                    #1028 - Lorem ipsum dolor
-                                                    sit amet consectetur
-                                                    adipisicing elit. Commodi
-                                                    non deserunt exercitationem
-                                                    laboriosam beatae
-                                                    voluptatibus tempora
-                                                    adipisci quis voluptates
-                                                    atque!
+                                                    #1028 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi non deserunt exercitationem laboriosam beatae voluptatibus tempora adipisci quis voluptates atque!
                                                 </span>
                                             </li>
                                         </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="acceptance-avatar" class="avatar actor__avatar" /></td>
+                                    <td><strong class="actor__name">Nguyễn Mạnh Cường Gmail</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="history">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">
+                                        <ul class="history__header">
+                                            <li>
+                                                <span>Người xử lý</span>
+                                                <span class="time">09:50 20/07/2020</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="before">
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="http://images.vietid.net/avatars/1592815367410avatar-171449613.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Angela Julie
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="after">
+                                            <div class="assignee">
+                                                <div class="assignee__avatar">
+                                                    <img src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
+                                                </div>
+                                                <div class="assignee__name">
+                                                    Nguyễn Mạnh Cường
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <ul class="history__header">
+                                            <li>
+                                                <span>Gắn thẻ</span>
+                                                <span class="time">09:51 20/07/2020</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="before">
+                                            <span class="label label--default">Bizfly</span>
+                                            <span class="label label--primary">Ticket Platform</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="after">
+                                            <span class="label label--default">Bizfly</span>
+                                            <span class="label label--primary">Ticket Platform</span>
+                                            <span class="label label--default">PR Đăng tin</span>
+                                            <span class="label label--primary">Phát triển phần mềm</span>
+                                            <span class="label label--default">Tiếp nhận và xử lý lỗi</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <ul class="history__header">
+                                            <li>
+                                                <span>File đính kèm</span>
+                                                <span class="time">09:51 20/07/2020</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="before">
+                                            <ul class="attachment-list">
+                                                <li class="attachment-list__item"><a href="#">Lorem, ipsum dolor.</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="after">
+                                            <ul class="attachment-list">
+                                                <li class="attachment-list__item"><a href="#">Lorem ipsum dolor sit.</a></li>
+                                                <li class="attachment-list__item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                                                <li class="attachment-list__item"><a href="#">Lorem, ipsum dolor.</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -252,12 +828,23 @@
                             </div>
                             <div class="item__text">
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Totam tempore doloremque
-                                    odio quis perspiciatis expedita earum
-                                    excepturi autem numquam, similique corrupti,
-                                    necessitatibus voluptate omnis odit modi.
-                                    Recusandae facilis ducimus officiis!
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam tempore doloremque odio quis perspiciatis expedita earum excepturi autem numquam, similique corrupti, necessitatibus voluptate omnis odit modi. Recusandae facilis ducimus officiis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__avatar">
+                            <img class="avatar" src="/images/icon.png" alt="" />
+                        </div>
+                        <div class="item__content">
+                            <div class="item__actor">
+                                <strong>Nguyễn Mạnh Cường</strong>
+                                <span class="item__time">12:00 20/07/2020</span>
+                            </div>
+                            <div class="item__text">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam tempore doloremque odio quis perspiciatis expedita earum excepturi autem numquam, similique corrupti, necessitatibus voluptate omnis odit modi. Recusandae facilis ducimus officiis!
                                 </p>
                             </div>
                         </div>
@@ -273,62 +860,20 @@
                             </div>
                             <div class="item__text">
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Totam tempore doloremque
-                                    odio quis perspiciatis expedita earum
-                                    excepturi autem numquam, similique corrupti,
-                                    necessitatibus voluptate omnis odit modi.
-                                    Recusandae facilis ducimus officiis!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__avatar">
-                            <img class="avatar" src="/images/icon.png" alt="" />
-                        </div>
-                        <div class="item__content">
-                            <div class="item__actor">
-                                <strong> Nguyễn Mạnh Cường </strong>
-                                <span class="item__time">12:00 20/07/2020</span>
-                            </div>
-                            <div class="item__text">
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Totam tempore doloremque
-                                    odio quis perspiciatis expedita earum
-                                    excepturi autem numquam, similique corrupti,
-                                    necessitatibus voluptate omnis odit modi.
-                                    Recusandae facilis ducimus officiis!
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam tempore doloremque odio quis perspiciatis expedita earum excepturi autem numquam, similique corrupti, necessitatibus voluptate omnis odit modi. Recusandae facilis ducimus officiis!
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="separator separator--230"></div>
                 <table class="detail">
                     <tbody>
-                        <tr>
-                            <td>
-                                <span class="detail__here"
-                                    >Nhấn vào đây để xem chi tiết:
-                                </span>
-                            </td>
-                        </tr>
                         <tr>
                             <td>
                                 <a href="#" class="detail__link">
                                     Xem chi tiết Ticket
                                 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="detail__notice">
-                                    Hãy bỏ qua email này nếu nội dung email
-                                    không liên quan tới bạn
-                                </span>
                             </td>
                         </tr>
                     </tbody>
@@ -343,21 +888,15 @@
                                     Copyright @ 2020 - Bizfly
                                 </p>
                                 <p>
-                                    Tầng 17 tòa nhà Center Building - Hapulico
-                                    Complex.
+                                    Tầng 17 tòa nhà Center Building - Hapulico Complex.
                                 </p>
                                 <p>
-                                    Số 1 Nguyễn Huy Tưởng, Quận Thanh Xuân, TP.
-                                    Hà Nội
+                                    Số 1 Nguyễn Huy Tưởng, Quận Thanh Xuân, TP. Hà Nội
                                 </p>
                             </td>
                             <td class="footer__right">
                                 <div class="logo">
-                                    <img
-                                        class="logo__image"
-                                        src="https://ticket.mediacdn.vn/logo-1-3f188052-95b3-4b4b-9127-64a3254fde1c.png"
-                                        alt="logo"
-                                    />
+                                    <img class="logo__image" src="./images/logo-4.png" alt="logo" />
                                 </div>
                             </td>
                         </tr>
