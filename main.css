@@ -139,6 +139,7 @@ p {
   padding: 4px 5px;
   border: 1px solid #000;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .assignee {
@@ -196,17 +197,16 @@ p {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 2px;
-  color: #fff;
+  color: #222;
   max-width: 165px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 1px;
 }
 
 .label--default {
   background-color: #489cfe;
-  color: #000;
+  color: #222;
 }
 
 .label--primary {
@@ -260,7 +260,8 @@ p {
   padding: 10px 15px;
 }
 
-.footer p {
+.footer p,
+.footer a {
   font-size: 12px;
   color: #666666 !important;
 }
@@ -321,10 +322,22 @@ p {
 
 .before,
 .after {
-  padding: 10px;
-  vertical-align: top;
-  margin-bottom: 5px;
+  padding: 5px;
+  vertical-align: middle;
   min-height: 36px;
+  margin-left: 15px;
+}
+
+.before p,
+.after p {
+  margin-bottom: 0;
+}
+
+.before img,
+.after img {
+  max-height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .before {
@@ -387,13 +400,14 @@ p {
 }
 
 .sub-tickets {
-  padding-left: 0px;
-  margin: 0;
+  padding-left: 0;
+  margin: 0 0 0 15px;
   list-style: none;
 }
 
 .sub-tickets li {
   margin-bottom: 5px;
+  margin-left: 0 !important;
 }
 
 .sub-tickets li span {

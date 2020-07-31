@@ -4,424 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ticket Platform - Email Templates</title>
-        <!-- <link rel="stylesheet" href="./main.css" /> -->
-        <style>
-            *,
-            *::before,
-            *::after {
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-            }
-
-            * {
-                font-size: 14px;
-                color: #222;
-            }
-
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-size: 14px;
-            }
-
-            a {
-                color: #0150ac;
-                -webkit-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out;
-            }
-
-            p {
-                margin-top: 0;
-                margin-bottom: 0.5rem;
-            }
-
-            .no-margin {
-                margin: 0;
-            }
-
-            .header {
-                padding: 0 20px;
-            }
-
-            .header__link {
-                font-size: 12px;
-            }
-
-            .header__avatar {
-                width: 45px;
-            }
-
-            .header__avatar img {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-            }
-
-            .separator {
-                width: 100%;
-                height: 2px;
-                background-color: rgba(102, 102, 102, 0.5);
-            }
-
-            .separator--230 {
-                margin: 5px 0;
-                width: 230px;
-            }
-
-            .content {
-                padding: 0 20px;
-            }
-
-            .ticket__name {
-                font-weight: 700;
-                font-size: 16px;
-                text-decoration: none;
-            }
-
-            .ticket__name:hover {
-                text-decoration: underline;
-            }
-
-            .business__image {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-            }
-
-            .block {
-                margin-bottom: 10px;
-            }
-
-            .ticket {
-                margin-top: 10px;
-            }
-
-            .info__title {
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 0;
-                color: rgba(0, 0, 0, 0.75);
-            }
-
-            .table {
-                width: 100%;
-            }
-
-            .table__row-space {
-                display: block;
-                height: 10px;
-                width: 100%;
-            }
-
-            .table__column-1 {
-                width: 150px;
-                vertical-align: top;
-            }
-
-            .status {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            .status__color {
-                width: 30px;
-                height: 20px;
-                background-color: #0150ac;
-            }
-
-            .status__color--inprogress {
-                background-color: #f2c94c;
-            }
-
-            .status__name {
-                margin-left: 5px;
-            }
-
-            .priority {
-                padding: 4px 5px;
-                border: 1px solid #000;
-                border-radius: 5px;
-            }
-
-            .assignee {
-                display: -webkit-inline-box;
-                display: -ms-inline-flexbox;
-                display: inline-flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                border-radius: 5px;
-                font-size: 12px;
-                padding: 5px;
-            }
-
-            .assignee__avatar {
-                margin-right: 5px;
-                height: 18px;
-            }
-
-            .assignee__name {
-                font-weight: bold;
-            }
-
-            .assignee img {
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-            }
-
-            .acceptance {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-            }
-
-            .acceptance__avatar {
-                margin-right: 10px;
-            }
-
-            .acceptance__info span {
-                display: block;
-            }
-
-            .acceptance__email {
-                color: grey;
-                font-size: 12px;
-            }
-
-            .acceptance img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .label {
-                display: inline-block;
-                padding: 5px 10px;
-                border-radius: 2px;
-                color: #fff;
-                max-width: 165px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                margin-bottom: 1px;
-            }
-
-            .label--default {
-                background-color: #489cfe;
-                color: #000;
-            }
-
-            .label--primary {
-                background-color: #0168df;
-            }
-
-            .detail {
-                width: 100%;
-            }
-
-            .detail__here {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            .detail__link {
-                display: inline-block;
-                padding: 10px 15px;
-                color: #fff !important;
-                border-radius: 5px;
-                background-color: #0150ac;
-                text-decoration: none;
-                margin-bottom: 5px;
-            }
-
-            .detail__link:hover {
-                background-color: #013879;
-            }
-
-            .detail__notice {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                font-style: italic;
-                font-size: 12px;
-            }
-
-            .footer {
-                width: 100%;
-                height: 100%;
-                background-color: #ebeef0;
-                color: #fff;
-                font-size: 12px;
-                padding: 10px 15px;
-            }
-
-            .footer p {
-                font-size: 12px;
-                color: #666666 !important;
-            }
-
-            @media only screen and (min-width: 500px) {
-                .footer {
-                    padding: 15px 20px;
-                }
-                .footer__right {
-                    width: 165px;
-                }
-            }
-
-            .footer .logo {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            .footer .logo__image {
-                height: 35px;
-            }
-
-            .w-100 {
-                width: 100%;
-            }
-
-            .avatar {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-            }
-
-            .d-flex {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-            }
-
-            .align-items--center {
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            .actor__name {
-                margin-left: 5px;
-                color: rgba(0, 0, 0, 0.75);
-            }
-
-            .time {
-                font-size: 12px;
-                color: grey;
-            }
-
-            .before,
-            .after {
-                padding: 10px;
-                vertical-align: top;
-                margin-bottom: 5px;
-                min-height: 36px;
-            }
-
-            .before {
-                display: inline-block;
-                background-color: #ffebe6;
-            }
-
-            .before div,
-            .before a,
-            .before p,
-            .before .label {
-                text-decoration: line-through;
-            }
-
-            .arrow {
-                width: 2px;
-                display: inline-block;
-            }
-
-            .after {
-                display: inline-block;
-                background-color: #e3fcef;
-            }
-
-            .history {
-                margin-bottom: 20px;
-            }
-
-            .history__header {
-                list-style: square;
-                padding-left: 15px;
-                margin: 5px 0;
-            }
-
-            .comment .item {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-            }
-
-            .comment .item:not(:last-child) {
-                margin-bottom: 10px;
-            }
-
-            .comment .item__avatar {
-                margin-right: 5px;
-            }
-
-            .comment .item__time {
-                font-size: 12px;
-                color: grey;
-            }
-
-            .comment .item__text {
-                margin-top: 10px;
-            }
-
-            .sub-tickets {
-                padding-left: 0px;
-                margin: 0;
-                list-style: none;
-            }
-
-            .sub-tickets li {
-                margin-bottom: 5px;
-            }
-
-            .sub-tickets li span {
-                padding: 5px;
-                display: inline-block;
-                background-color: #e3fcef;
-            }
-
-            .attachment-list {
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                list-style: none;
-            }
-
-            .attachment-list__item {
-                min-height: 25px;
-            }
-            /*# sourceMappingURL=main.css.map */
-        </style>
+        <link rel="stylesheet" href="./main.css" />
+        <style></style>
     </head>
     <body>
         <div class="container">
@@ -530,6 +114,30 @@
                                                 <div class="status__color status__color--inprogress"></div>
                                                 <div class="status__name">Đang xử lý</div>
                                             </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <ul class="history__header">
+                                            <li>
+                                                <span>Độ ưu tiên</span>
+                                                <span class="time">09:51 20/07/2020</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="before">
+                                            <span class="priority">Trung bình</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="after">
+                                            <span class="priority">Cao</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -819,7 +427,7 @@
                     <div class="separator separator--230 separator--info"></div>
                     <div class="item">
                         <div class="item__avatar">
-                            <img class="avatar" src="/images/icon.png" alt="" />
+                            <img class="avatar" src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
                         </div>
                         <div class="item__content">
                             <div class="item__actor">
@@ -835,7 +443,7 @@
                     </div>
                     <div class="item">
                         <div class="item__avatar">
-                            <img class="avatar" src="/images/icon.png" alt="" />
+                            <img class="avatar" src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
                         </div>
                         <div class="item__content">
                             <div class="item__actor">
@@ -851,7 +459,7 @@
                     </div>
                     <div class="item">
                         <div class="item__avatar">
-                            <img class="avatar" src="/images/icon.png" alt="" />
+                            <img class="avatar" src="https://vietid.vcmedia.vn/vietid/image/avatars/170078641.png" alt="" />
                         </div>
                         <div class="item__content">
                             <div class="item__actor">
@@ -896,7 +504,7 @@
                             </td>
                             <td class="footer__right">
                                 <div class="logo">
-                                    <img class="logo__image" src="./images/logo-4.png" alt="logo" />
+                                    <img class="logo__image" src="https://ticket.mediacdn.vn/logo-4-77676ff1-7c2e-46db-a3fe-351ee0bf8b96.png" alt="logo" />
                                 </div>
                             </td>
                         </tr>
