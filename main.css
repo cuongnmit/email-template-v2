@@ -426,4 +426,52 @@ p {
 .attachment-list__item {
   min-height: 25px;
 }
+
+ul li {
+  margin-left: 0 !important;
+}
+
+.relate-tickets {
+  padding-left: 0;
+  margin: 0 0 0 15px;
+  list-style: none;
+}
+
+.relate-tickets li {
+  margin-bottom: 5px;
+  margin-left: 0 !important;
+  background-color: #e3fcef;
+  padding: 5px;
+}
+
+.relate-tickets .old {
+  background-color: #ffebe6;
+}
+
+.relate-tickets .new {
+  background-color: #e3fcef;
+}
+
+.checklist {
+  padding-left: 0;
+  margin: 0 0 0 15px;
+  list-style: none;
+}
+
+.checklist li {
+  margin-bottom: 5px;
+}
+
+.checklist span {
+  display: inline-block;
+  padding: 5px;
+}
+
+.checklist .old {
+  background-color: #ffebe6;
+}
+
+.checklist .new {
+  background-color: #e3fcef;
+}
 /*# sourceMappingURL=main.css.map */

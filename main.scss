@@ -407,3 +407,53 @@ p {
     min-height: 25px;
   }
 }
+
+ul {
+  li {
+    margin-left: 0 !important;
+  }
+}
+
+.relate-tickets {
+  padding-left: 0;
+  margin: 0 0 0 15px;
+  list-style: none;
+
+  li {
+    margin-bottom: 5px;
+    margin-left: 0 !important;
+    background-color: #e3fcef;
+    padding: 5px;
+  }
+
+  .old {
+    background-color: #ffebe6;
+  }
+
+  .new {
+    background-color: #e3fcef;
+  }
+}
+
+.checklist {
+  padding-left: 0;
+  margin: 0 0 0 15px;
+  list-style: none;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  span {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .old {
+    background-color: #ffebe6;
+  }
+
+  .new {
+    background-color: #e3fcef;
+  }
+}
