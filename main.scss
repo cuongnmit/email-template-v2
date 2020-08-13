@@ -53,6 +53,16 @@ p {
       height: 30px;
       border-radius: 50%;
     }
+
+    img.warning-img {
+      border-radius: 0;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -73,8 +83,8 @@ p {
 
 .ticket {
   &__name {
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 18px;
     text-decoration: none;
 
     &:hover {
@@ -455,5 +465,46 @@ ul {
 
   .new {
     background-color: #e3fcef;
+  }
+}
+
+.text-danger {
+  color: $cancel;
+}
+
+.warning {
+  margin-bottom: 15px;
+  &__text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__deadline {
+    display: flex;
+    line-height: 35px;
+  }
+
+  &__time {
+    font-weight: bold;
+    color: $cancel;
+    padding-left: 10px;
+  }
+
+  &__countdown {
+    font-style: italic;
+
+    b {
+      font-style: normal;
+    }
+  }
+}
+
+.datetime {
+  display: flex;
+  align-items: center;
+  line-height: 35px;
+
+  img {
+    margin-right: 10px;
   }
 }
