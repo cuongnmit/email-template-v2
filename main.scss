@@ -487,14 +487,17 @@ ul {
   &__time {
     font-weight: bold;
     color: $cancel;
-    padding-left: 10px;
+    padding-left: 5px;
   }
 
   &__countdown {
     font-style: italic;
+    font-size: 12px;
+    margin-left: 5px;
 
     b {
       font-style: normal;
+      font-size: 12px;
     }
   }
 }
