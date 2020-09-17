@@ -64,7 +64,7 @@ p {
 .separator {
   width: 100%;
   height: 2px;
-  background-color: rgba(102, 102, 102, 0.5);
+  background-color: #d6dee9;
 }
 
 .separator--230 {
@@ -102,9 +102,9 @@ p {
 
 .info__title {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 0;
-  color: rgba(0, 0, 0, 0.75);
+  color: #666666;
 }
 
 .table {
@@ -170,7 +170,8 @@ p {
 }
 
 .assignee__name {
-  font-weight: bold;
+  font-weight: 400;
+  color: #666666;
 }
 
 .assignee img {
@@ -534,5 +535,40 @@ ul li {
 
 .datetime img {
   margin-right: 10px;
+}
+
+.warning-due-date {
+  color: #fd7e14;
+}
+
+.over-due-date {
+  color: #db3700;
+}
+
+.breadcrumb {
+  color: #666666;
+  padding: 0 20px;
+}
+
+.breadcrumb__slash {
+  padding: 0 5px;
+  font-size: 12px;
+  display: inline-block;
+  color: #666;
+}
+
+.breadcrumb__image {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.breadcrumb__name {
+  color: #666666;
+  font-size: 12px;
+}
+
+.d-none {
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
