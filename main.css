@@ -102,7 +102,7 @@ p {
 
 .info__title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0;
   color: #666666;
 }
@@ -120,6 +120,11 @@ p {
 .table__column-1 {
   width: 150px;
   vertical-align: top;
+}
+
+.table__column-1 > :first-child {
+  display: inline-block;
+  min-height: 22px;
 }
 
 .status {
@@ -146,10 +151,12 @@ p {
 }
 
 .priority {
-  padding: 4px 5px;
+  padding: 0 8px;
   border: 1px solid #000;
   border-radius: 5px;
   display: inline-block;
+  font-size: 12px;
+  height: 20px;
 }
 
 .assignee {
@@ -162,6 +169,7 @@ p {
   border-radius: 5px;
   font-size: 12px;
   padding: 5px;
+  height: 22px;
 }
 
 .assignee__avatar {
@@ -206,13 +214,15 @@ p {
 
 .label {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 2px;
   color: #222;
   max-width: 165px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 22px;
+  font-size: 12px;
 }
 
 .label--default {
@@ -499,23 +509,31 @@ ul li {
   font-weight: bold;
 }
 
+.warning__calendar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .warning__deadline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  line-height: 35px;
 }
 
 .warning__time {
   font-weight: bold;
   color: #db3700;
-  padding-left: 5px;
+  padding: 7px 0 7px 5px;
 }
 
 .warning__countdown {
   font-style: italic;
   font-size: 12px;
   margin-left: 5px;
+  padding: 7px 0;
 }
 
 .warning__countdown b {
@@ -530,11 +548,15 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 35px;
+  line-height: 22px;
 }
 
 .datetime img {
   margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .warning-due-date {
@@ -551,7 +573,6 @@ ul li {
 }
 
 .breadcrumb__slash {
-  padding: 0 5px;
   font-size: 12px;
   display: inline-block;
   color: #666;
@@ -570,5 +591,10 @@ ul li {
 
 .d-none {
   display: none !important;
+}
+
+.customfield__name {
+  display: inline-block;
+  min-height: 22px;
 }
 /*# sourceMappingURL=main.css.map */

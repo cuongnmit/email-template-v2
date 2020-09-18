@@ -112,7 +112,7 @@ p {
 .info {
   &__title {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0;
     color: #666666;
   }
@@ -130,6 +130,11 @@ p {
   &__column-1 {
     width: 150px;
     vertical-align: top;
+
+    > :first-child {
+      display: inline-block;
+      min-height: 22px;
+    }
   }
 }
 
@@ -153,10 +158,12 @@ p {
 }
 
 .priority {
-  padding: 4px 5px;
+  padding: 0 8px;
   border: 1px solid #000;
   border-radius: 5px;
   display: inline-block;
+  font-size: 12px;
+  height: 20px;
 }
 
 .assignee {
@@ -165,6 +172,7 @@ p {
   border-radius: 5px;
   font-size: 12px;
   padding: 5px;
+  height: 22px;
 
   &__avatar {
     margin-right: 5px;
@@ -209,13 +217,15 @@ p {
 
 .label {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 2px;
   color: #222;
   max-width: 165px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 22px;
+  font-size: 12px;
 
   &--default {
     background-color: lighten($light-blue, $amount: 20);
@@ -475,26 +485,34 @@ ul {
 
 .warning {
   margin-bottom: 15px;
+
   &__text {
     font-size: 14px;
     font-weight: bold;
   }
 
+  &__calendar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
   &__deadline {
     display: flex;
-    line-height: 35px;
   }
 
   &__time {
     font-weight: bold;
     color: $cancel;
-    padding-left: 5px;
+    padding: 7px 0 7px 5px;
   }
 
   &__countdown {
     font-style: italic;
     font-size: 12px;
     margin-left: 5px;
+    padding: 7px 0;
 
     b {
       font-style: normal;
@@ -506,10 +524,13 @@ ul {
 .datetime {
   display: flex;
   align-items: center;
-  line-height: 35px;
+  line-height: 22px;
 
   img {
     margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
   }
 }
 
@@ -526,7 +547,6 @@ ul {
   padding: 0 20px;
 
   &__slash {
-    padding: 0 5px;
     font-size: 12px;
     display: inline-block;
     color: #666;
@@ -546,4 +566,11 @@ ul {
 
 .d-none {
   display: none !important;
+}
+
+.customfield {
+  &__name {
+    display: inline-block;
+    min-height: 22px;
+  }
 }
